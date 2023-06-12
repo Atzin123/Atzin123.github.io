@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>Albert Einstein: Extra</TITLE>
+
+<BODY>
+<BODY BACKGROUND="Fondo.jpg">
+<font color="White" face="Candara">
+<h5 align="right"> Autor:Roque Almaraz Atzin 4°A Cetis 16</h5>
+</font>
+<font color="White" face="Bradley Hand">
+<h1 align="center">Albert Einstein</h1>
+</font>
+
+<p align="center">
+<script languaje="JavaScript1.1">
+var specifyimage=new Array() //Tus imagenes
+specifyimage[0]="AE.gif"
+specifyimage[1]="Albert.gif"
+specifyimage[2]="AlbertEinstein.gif"
+specifyimage[3]="Einstein.gif"
+
+var delay=7000 //7 segundos
+
+//Contador para pasar cada una de las fotos
+var count=1;
+
+var cubeimage=new Array()
+for (i=0;i<specifyimage.length;i++){
+cubeimage[i]=new Image()
+cubeimage[i].src=specifyimage[i]
+}
+
+function movecube(){
+if (window.createPopup)
+cube.filters[0].apply()
+document.images.cube.src=cubeimage[count].src;
+if (window.createPopup)
+cube.filters[0].play()
+count++;
+if (count==cubeimage.length)
+count=0;
+setTimeout("movecube()",delay)
+}
+
+window.onload=new Function("setTimeout('movecube()',delay)")
+</script>
+
+<img src="AE.gif" name="cube" border=0 style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')">
+
+<font color="White" face="Times New Roman">
+<h1 align="center">Musica del agrado de Albert Einstein<br></h1>
+<p align="center">
+<embed src="Mozart.mp3" width="145" height="60" autoplay="true"></embed>
+</font>
+
+<font color="White" face="Times New Roman">
+<h1 align="center">Imagenes<br></h1>
+</font>
+<p align="center">
+<img src="AE.jpg" alt="Disco" WIDTH="600" HEIGHT="400" hspace="6">
+<img src="Albert.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="Albert2.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="AlbertEinstein.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="Einstein.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="einstein_1947.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="einsteinalbert.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+<img src="EinsteinForm.jpg" alt="Disco" WIDTH="400" HEIGHT="400" hspace="6">
+
+<CENTER>
+<script>
+function confirmacion(){
+    var pregunta = confirm("¿Deseas regresar al inicio?")
+    if (pregunta){
+         alert("En un momento te llevamos")
+         window.location = "Index.html";
+    }
+    else{
+         alert("Bueno esntonces hasta que estes listo")
+    }
+}
+</script>
+
+<button style="background-color:#D9E6EA; border-color:#D9E6EA; type="button" onclick="confirmacion()">inicio</button></CENTER>
+<br><br>
+
+</p>
+</font>
+</BODY>
+</HTML>
